@@ -1,0 +1,45 @@
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        
+     double[] grades = new double[4];
+     string[] subjects = {"Data Structure", "Programming2", "Retorika", "WRP"};
+ 
+        for (int a = 0; a < 4; a++)
+        {
+        Console.Write(subjects[a] + ": ");
+        grades[a] = Convert.ToDouble(Console.ReadLine());
+        }
+        
+    double average = (grades[0] + grades[1] + grades[2] + grades[3]) / 4;
+    Console.WriteLine("Average: " + average.ToString("F2"));
+    
+        if (average > 100)
+        {
+            Console.WriteLine("Invalid Grade");
+        }
+        else if (average >= 98)
+        {
+            Console.WriteLine("With Highest Honors");
+        }
+        else if (average >= 95)
+        {
+            Console.WriteLine("With High Honors");
+        }
+        else if (average >= 90)
+        {
+            Console.WriteLine("With Honors");
+        }
+        else if (average >= 75)
+        {
+            Console.WriteLine("Passed");
+        }
+        else
+        {
+            Console.WriteLine("Failed");
+        }
+    }    
+    }
